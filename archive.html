@@ -1,6 +1,6 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; style-src &#x27;sha256-GYmsWNj39yxX5vomavkVn/MG2gZ7SdR89IjqDBtnKSQ=&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;"><title>AI 日报 · 历史日历</title>
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; style-src &#x27;sha256-A7hUlWHZ8ltlch7vaYBO7B29YdRg1af3niSOXIOhjJU=&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;; script-src &#x27;sha256-xbInfJvTe2FyirOARNZ+B8peDg5+Fc9YjuhYO+1DI/8=&#x27;"><title>AI 日报 · 历史日历</title>
 <style>
 :root{color-scheme:light;--bg:#f3f1e9;--paper:#fffdf8;--ink:#1d2c25;--muted:#627067;--line:#dadcd0;--accent:#106b52;--gold:#b8914a}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;overflow-wrap:anywhere}
@@ -29,13 +29,54 @@ footer.wrap{display:flex;justify-content:space-between;gap:20px;padding-top:26px
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.section-nav,.filter-bar,.feedback,.reading-tools,.archive{display:none}body{background:white}.story-grid,.learning-grid,.overview{display:block}.story-card,.learning-card,.judgment-panel,.themes-panel{margin-bottom:20px;box-shadow:none}.masthead{background:#fff;color:#111}.masthead p{color:#333}.connection-grid{display:block}}
 
-.calendar-month{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;margin:18px 0;max-width:660px}
-.calendar-month>summary{font-size:1.1rem;color:var(--ink);font-weight:650}
-.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
-.calendar-grid>*{display:flex;align-items:center;justify-content:center;min-height:44px;border-radius:7px}
-.calendar-grid a{background:#deebdf;color:var(--accent);font-weight:700;text-decoration:none}
-.calendar-grid a:hover{background:#c8ddca}.calendar-grid span{color:#899188}.calendar-grid .weekday{font-size:.76rem;color:var(--muted)}
-.issue-list{list-style:none;padding:0}.issue-list li{padding:12px 0;border-bottom:1px solid var(--line)}
-.issue-list a{color:var(--ink);text-decoration:none}.issue-list time{color:var(--accent);font-size:.85rem;margin-right:14px}
-</style></head><body><main class="wrap"><p class="section-kicker">DAILY AI INTELLIGENCE</p><h1>历史日历</h1><nav><a href="index.html">阅读最新一期 ↗</a></nav><details class="calendar-month" open><summary>2026 年 10 月</summary><div class="calendar-grid"><span class="weekday">一</span><span class="weekday">二</span><span class="weekday">三</span><span class="weekday">四</span><span class="weekday">五</span><span class="weekday">六</span><span class="weekday">日</span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><a href="reports/2026-10-11.html" aria-label="2026-10-11：怎样判断科研 Agent 真的改进了方法？" title="怎样判断科研 Agent 真的改进了方法？">11</a><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span></span></div></details><h2>往期日报</h2><ul class="issue-list"><li><a href="reports/2026-10-11.html"><time>2026-10-11</time>怎样判断科研 Agent 真的改进了方法？</a></li></ul></main>
-<footer>AI 日报 · 记录值得读的技术与实践</footer></body></html>
+.archive-brand{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 0 20px;border-bottom:1px solid var(--line)}
+.archive-brand a{font-size:.78rem;text-decoration:none;color:var(--accent)}.archive-brand .eyebrow{color:var(--accent);letter-spacing:.13em}
+.archive-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;padding:32px 0 26px}
+.archive-heading h1{font-weight:600;font-size:clamp(2rem,4vw,3rem);letter-spacing:-.05em}.archive-heading p{margin:8px 0 0;font-size:.88rem;color:var(--muted)}
+.archive-total{white-space:nowrap;color:var(--muted);font-size:.8rem}.archive-total strong{font:2.5rem/1 Georgia,serif;color:var(--accent);margin-right:7px}
+.archive-layout{display:grid;grid-template-columns:316px minmax(0,1fr);gap:30px;align-items:start}
+.archive-sidebar{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;position:sticky;top:20px}
+.month-controls{display:flex;justify-content:space-between;align-items:center;gap:4px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.month-controls select{font-size:.84rem;min-width:0;max-width:170px;border:0;margin:0;padding:4px;background:transparent}
+.month-controls button{width:36px;min-height:36px!important;margin:0;padding:0;border:0;border-radius:50%;font-size:1.25rem}.month-controls button:hover:not(:disabled){background:#e6ece2}
+.calendar-month{margin:0}.calendar-month>summary{font-size:.87rem;font-weight:650;color:var(--ink);padding:14px 0;list-style:none}.calendar-month>summary::-webkit-details-marker{display:none}
+.month-controls:not([hidden])~.calendar-month>summary{display:none}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;text-align:center}
+.calendar-grid>*{display:flex;align-items:center;justify-content:center;min-height:36px;border-radius:9px;font-size:.78rem;font-variant-numeric:tabular-nums}
+.calendar-grid a{background:#155943;color:#fffdf2;font-weight:650;text-decoration:none;position:relative;box-shadow:0 2px 4px #184c3612}
+.calendar-grid a:hover{background:#0c3b2c;transform:translateY(-1px)}.calendar-grid span{color:#a6ada5}.calendar-grid .weekday{font-size:.68rem;color:var(--muted);min-height:30px}
+.calendar-legend{font-size:.7rem;color:var(--muted);margin:16px 0 2px;display:flex;align-items:center;gap:7px}.calendar-legend:before{content:"";width:7px;height:7px;background:#155943;border-radius:50%}
+.archive-range{font: .65rem ui-monospace,monospace;color:#8b9389;margin:8px 0 0;padding-top:12px;border-top:1px solid var(--line)}
+.archive-month-list{margin:0}.archive-list-heading{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding:0 0 12px;margin-bottom:0;gap:8px}.archive-list-heading h2{font-size:1rem;margin:0;font-weight:650}.archive-list-heading span{font-size:.7rem;color:var(--muted)}
+.issue-entry{display:grid;grid-template-columns:45px minmax(0,1fr);gap:16px;padding:23px 0;border-bottom:1px solid var(--line)}
+.issue-date{padding-top:3px;text-align:center;color:var(--accent)}.issue-date strong{display:block;font:2.1rem/1 Georgia,serif}.issue-date span{font-size:.67rem;color:var(--muted)}
+.issue-entry h3{font-size:1.16rem;line-height:1.6;margin:4px 0 8px;letter-spacing:-.025em}.issue-entry h3 a{color:var(--ink);text-decoration:none}.issue-entry h3 a:hover{color:var(--accent)}
+.issue-entry p{font-size:.84rem;line-height:1.85;margin:0;color:var(--muted)}.issue-entry .issue-description{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.issue-entry .issue-meta-line{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:.67rem;color:#7e887c}.issue-latest{color:#196444;background:#e3ebde;border-radius:4px;padding:1px 6px}
+.issue-entry .issue-open{display:inline-block;font-size:.74rem;color:var(--accent);text-decoration:none;margin-top:12px}
+.archive-footer{display:flex;justify-content:space-between;gap:12px;margin-top:35px;padding:20px 0 26px;border-top:1px solid var(--line);font-size:.7rem;color:var(--muted)}.archive-footer a{color:var(--accent);text-decoration:none}
+@media(max-width:760px){.archive-layout{grid-template-columns:1fr;gap:25px}.archive-sidebar{position:static;padding:16px}.archive-heading{padding:24px 0 20px;gap:12px}.archive-heading p{font-size:.79rem}.archive-total strong{font-size:2rem}.archive-heading h1{font-size:2.2rem}.calendar-grid>*{min-height:38px}.issue-entry{gap:12px;padding:18px 0;grid-template-columns:38px minmax(0,1fr)}.issue-entry h3{font-size:1.08rem}.archive-brand .eyebrow{font-size:.6rem;letter-spacing:.08em}.archive-brand a{font-size:.72rem}}
+</style></head><body><main class="wrap"><nav class="archive-brand"><p class="eyebrow">AI DAILY · ARCHIVE</p><a href="index.html">最新日报 ↗</a></nav>
+<header class="archive-heading"><div><h1>历史日历</h1><p>按日期重读技术进展、争论与实践。</p></div><div class="archive-total"><strong>1</strong>期</div></header>
+<div class="archive-layout"><aside class="archive-sidebar" aria-label="按日期查阅"><div class="month-controls" hidden><button id="month-older" type="button" aria-label="上一个有日报的月份">‹</button><select id="month-picker" aria-label="选择月份"><option value="2026-10">2026 年 10 月</option></select><button id="month-newer" type="button" aria-label="下一个有日报的月份">›</button></div>
+<details class="calendar-month" open data-month="2026-10"><summary>2026 年 10 月</summary><div class="calendar-grid"><span class="weekday">一</span><span class="weekday">二</span><span class="weekday">三</span><span class="weekday">四</span><span class="weekday">五</span><span class="weekday">六</span><span class="weekday">日</span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><a href="reports/2026-10-11.html" aria-label="2026-10-11：怎样判断科研 Agent 真的改进了方法？" title="怎样判断科研 Agent 真的改进了方法？">11</a><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span></span></div></details><p class="calendar-legend">已出版 · 点击日期阅读</p><p class="archive-range">2026-10-11 — 2026-10-11</p></aside><div><section class="archive-month-list" data-month="2026-10"><div class="archive-list-heading"><h2>2026 年 10 月</h2><span>1 期日报</span></div><article class="issue-entry"><time class="issue-date" datetime="2026-10-11"><strong>11</strong><span>10 月</span></time>
+<div><div class="issue-meta-line"><span class="issue-latest">最新一期</span><span>14 条资讯 · 2 份学习材料</span></div><h3><a href="reports/2026-10-11.html">怎样判断科研 Agent 真的改进了方法？</a></h3>
+<p class="issue-description">让 Agent 多跑几次实验，总能找到更好的结果吗？本期 Epoch 的评测给了一个不太顺利的例子：模型交出的方案有些确实改善了表现，但离已有方法仍有距离；另一些漂亮数字，则来自反复运行后挑出最好的一次。</p><a class="issue-open" href="reports/2026-10-11.html">阅读全文 ↗</a></div></article></section></div></div><footer class="archive-footer"><span>AI 日报 · 技术、观点与实践</span><a href="index.html">继续阅读 ↗</a></footer></main>
+<script>
+(() => {
+ const selector=document.getElementById('month-picker');
+ const calendars=[...document.querySelectorAll('.calendar-month')];
+ const listings=[...document.querySelectorAll('.archive-month-list')];
+ const older=document.getElementById('month-older'), newer=document.getElementById('month-newer');
+ function select(index){
+  selector.selectedIndex=index;const month=selector.value;
+  for(const box of calendars){box.hidden=box.dataset.month!==month;box.open=!box.hidden;}
+  for(const list of listings)list.hidden=list.dataset.month!==month;
+  older.disabled=index===selector.options.length-1;newer.disabled=index===0;
+ }
+ selector.addEventListener('change',()=>select(selector.selectedIndex));
+ older.addEventListener('click',()=>select(selector.selectedIndex+1));
+ newer.addEventListener('click',()=>select(selector.selectedIndex-1));
+ document.querySelector('.month-controls').hidden=false;select(0);
+})();
+</script></body></html>
